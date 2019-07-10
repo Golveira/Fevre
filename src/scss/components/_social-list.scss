@@ -1,0 +1,27 @@
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__link {
+    color: $white;
+  }
+
+  &__icon {
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+
+  &--big {
+    & .social-list__icon {
+      font-size: 3rem;
+    }
+  }
+}

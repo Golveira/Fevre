@@ -1,0 +1,35 @@
+@charset 'UTF-8';
+
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+
+// Vendors
+@import "vendors/owlcarousel2/owl.carousel.scss";
+@import "vendors/owlcarousel2/owl.theme.default.scss";
+
+// Vendors Extension
+@import "vendors-extensions/owlcarousel2";
+
+// Base
+@import "base/base";
+@import "base/typography";
+@import "base/helpers";
+
+// Components
+@import "components/buttons";
+@import "components/contact-list";
+@import "components/social-list";
+@import "components/logo";
+@import "components/nav";
+@import "components/services";
+@import "components/news";
+@import "components/form";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+
+// Pages
+@import "pages/home";

@@ -1,0 +1,99 @@
+.nav {
+  @include respond(tab-port) {
+    width: 100%;
+    display: none;
+  }
+
+  &__menu {
+    display: flex;
+
+    @include respond(tab-port) {
+      flex-flow: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 1rem;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+      }
+    }
+
+    @include respond(tab-port) {
+      border-bottom: 1px solid transparentize($white, 0.8);
+      margin-right: 0;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    color: $white;
+    display: inline-block;
+    font-weight: 700;
+  }
+
+  &__icon {
+    color: transparentize($white, 0.4);
+    margin-left: 0.5rem;
+  }
+
+  &__dropdown {
+    background-color: $color-primary-dark;
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: 0;
+    transform: translateY(-1em);
+    transition: all 0.3s;
+    z-index: -1;
+
+    @include respond(tab-port) {
+      background-color: $color-primary;
+      position: static;
+      width: 100%;
+      display: none;
+    }
+  }
+
+  &__item:hover &__dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+    z-index: 10;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  &__dropdown-item {
+    border-bottom: 1px solid transparentize($white, 0.8);
+    width: 100%;
+
+    @include respond(tab-port) {
+      border-bottom: none;
+    }
+  }
+
+  &__dropdown-link {
+    color: $white;
+    display: inline-block;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+}

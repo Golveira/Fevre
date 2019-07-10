@@ -1,0 +1,19 @@
+.btn {
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: inherit;
+  outline: none;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: all 0.2s;
+
+  &--primary {
+    background-color: $color-primary;
+    color: $white;
+
+    &:hover {
+      background-color: $color-primary-light;
+    }
+  }
+}

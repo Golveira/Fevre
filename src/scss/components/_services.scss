@@ -1,0 +1,52 @@
+.services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include respond(phone) {
+    flex-flow: column;
+  }
+
+  &__box {
+    background-color: $color-primary-light;
+    border-radius: $border-radius-1;
+    color: $white;
+    flex: 0 0 24%;
+    transition: all 0.2s;
+
+    @include respond(tab-port) {
+      flex: 0 0 49%;
+      margin-bottom: 1rem;
+    }
+
+    @include respond(phone) {
+      flex: 0 0 100%;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+
+  &__link {
+    color: $white;
+    padding: 4rem 5rem;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__icon {
+    font-size: 3rem;
+  }
+
+  &__title {
+    font-weight: 300;
+    margin-top: 1rem;
+  }
+}

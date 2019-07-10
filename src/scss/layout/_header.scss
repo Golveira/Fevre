@@ -1,0 +1,55 @@
+.header {
+  &__top {
+    background-color: $blue-light;
+    font-size: 1.4rem;
+    padding: 1rem;
+
+    & .container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      @include respond(phone) {
+        flex-flow: column;
+      }
+    }
+  }
+
+  &__contact-list,
+  &__social-list {
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__contact-list {
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__bottom {
+    background-color: $blue;
+
+    & .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__toggle {
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+
+  &__toggle-icon {
+    color: $white;
+    cursor: pointer;
+    font-size: 3rem;
+  }
+}

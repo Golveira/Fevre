@@ -1,0 +1,34 @@
+$dot-background: $color-primary;
+$dot-background-active: $color-primary-light;
+$dot-width: 12px;
+$dot-height: 12px;
+
+.owl-dots {
+  .owl-dot {
+    span {
+      background: $white !important;
+      border: 2px solid $dot-background !important;
+      width: $dot-width !important;
+      height: $dot-height !important;
+    }
+
+    &.active,
+    &:hover {
+      span {
+        background: $color-primary !important;
+      }
+    }
+  }
+}
+
+.owl-item img {
+  height: 45rem !important;
+
+  @include respond(tab-port) {
+    height: 35rem !important;
+  }
+
+  @include respond(phone) {
+    height: 20rem !important;
+  }
+}

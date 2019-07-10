@@ -1,0 +1,55 @@
+.footer {
+  color: $white;
+  margin-top: 5rem;
+
+  @include respond(tab-port) {
+    text-align: center;
+  }
+
+  &__about {
+    background-color: $color-primary-light;
+    padding: 5rem;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+
+      @include respond(tab-port) {
+        flex-flow: column;
+      }
+    }
+  }
+
+  &__contact {
+    border-left: 1px solid transparentize($white, 0.7);
+    border-right: 1px solid transparentize($white, 0.7);
+    padding: 0 3rem;
+
+    @include respond(tab-port) {
+      border: none;
+      padding: 0;
+      margin: 2rem 0;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    border-bottom: 1px solid $white;
+    color: $white;
+  }
+
+  &__copy {
+    background-color: $color-primary;
+    color: $white;
+    text-align: center;
+    padding: 1rem;
+  }
+}
