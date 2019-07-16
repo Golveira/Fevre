@@ -2,10 +2,6 @@
   color: $white;
   margin-top: 5rem;
 
-  @include respond(tab-port) {
-    text-align: center;
-  }
-
   &__about {
     background-color: $color-primary-light;
     padding: 5rem;
@@ -20,6 +16,8 @@
 
       @include respond(tab-port) {
         flex-flow: column;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
@@ -29,11 +27,17 @@
     border-right: 1px solid transparentize($white, 0.7);
     padding: 0 3rem;
 
+    text-align: center;
+
     @include respond(tab-port) {
       border: none;
       padding: 0;
       margin: 2rem 0;
     }
+  }
+
+  &__logo {
+    width: 8rem;
   }
 
   &__text {

@@ -299,7 +299,10 @@ img {
   .contact-list__item {
     margin-right: 2rem; }
   .contact-list__link {
-    color: #fff; }
+    color: rgba(255, 255, 255, 0.85);
+    transition: all 0.2s; }
+    .contact-list__link:hover {
+      color: #fff; }
 
 .social-list {
   display: flex;
@@ -308,18 +311,21 @@ img {
   .social-list__item:not(:last-child) {
     margin-right: 2rem; }
   .social-list__link {
-    color: #fff; }
+    color: rgba(255, 255, 255, 0.85);
+    transition: all 0.2s; }
+    .social-list__link:hover {
+      color: #fff; }
   @media only screen and (max-width: 37.5em) {
     .social-list__icon {
       font-size: 2rem; } }
   .social-list--big .social-list__icon {
     font-size: 3rem; }
 
-.logo__image {
-  width: 10rem;
-  height: 10rem; }
+.logo {
+  width: 8rem;
+  height: 8rem; }
   @media only screen and (max-width: 56.25em) {
-    .logo__image {
+    .logo {
       width: 7rem;
       height: 7rem; } }
 
@@ -351,9 +357,12 @@ img {
       justify-content: space-between; } }
 
 .nav__link {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.85);
   display: inline-block;
-  font-weight: 700; }
+  font-weight: 700;
+  transition: all 0.2s; }
+  .nav__link:hover {
+    color: #fff; }
 
 .nav__icon {
   color: rgba(255, 255, 255, 0.6);
@@ -365,11 +374,11 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
+  transform: translateY(-1em);
+  z-index: -1;
   opacity: 0;
   visibility: 0;
-  transform: translateY(-1em);
-  transition: all 0.3s;
-  z-index: -1; }
+  transition: all 0.3s; }
   @media only screen and (max-width: 56.25em) {
     .nav__dropdown {
       background-color: #1e4895;
@@ -539,9 +548,6 @@ img {
 .footer {
   color: #fff;
   margin-top: 5rem; }
-  @media only screen and (max-width: 56.25em) {
-    .footer {
-      text-align: center; } }
   .footer__about {
     background-color: #2b67d4;
     padding: 5rem; }
@@ -553,16 +559,21 @@ img {
       justify-content: space-around; }
       @media only screen and (max-width: 56.25em) {
         .footer__about .container {
-          flex-flow: column; } }
+          flex-flow: column;
+          justify-content: center;
+          align-items: center; } }
   .footer__contact {
     border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-right: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 0 3rem; }
+    padding: 0 3rem;
+    text-align: center; }
     @media only screen and (max-width: 56.25em) {
       .footer__contact {
         border: none;
         padding: 0;
         margin: 2rem 0; } }
+  .footer__logo {
+    width: 8rem; }
   .footer__text {
     font-size: 1.4rem;
     margin-bottom: 1rem; }
