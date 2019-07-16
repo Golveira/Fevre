@@ -35,9 +35,14 @@
   }
 
   &__link {
-    color: $white;
+    color: transparentize($white, 0.15);
     display: inline-block;
     font-weight: 700;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $white;
+    }
   }
 
   &__icon {
@@ -48,14 +53,16 @@
   &__dropdown {
     background-color: $color-primary-dark;
     width: 200px;
+
     position: absolute;
     top: 100%;
     left: 0;
+    transform: translateY(-1em);
+    z-index: -1;
+
     opacity: 0;
     visibility: 0;
-    transform: translateY(-1em);
     transition: all 0.3s;
-    z-index: -1;
 
     @include respond(tab-port) {
       background-color: $color-primary;

@@ -8,6 +8,11 @@
   }
 
   &__link {
-    color: $white;
+    color: transparentize($white, 0.15);
+    transition: all 0.2s;
+
+    &:hover {
+      color: $white;
+    }
   }
 }
