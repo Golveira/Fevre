@@ -7,8 +7,9 @@ Reformulação do Site da Fundação Educacional de Volta Redonda para fins educ
 
 * [SASS](https://github.com/sass/sass) utilizando nomeclatura de classes [BEM](https://en.bem.info/methodology/) 
 * [7-1 Pattern](https://github.com/HugoGiraudel/sass-boilerplate) para organização de pastas
+* [Postcss](https://github.com/postcss/postcss) e [Autoprefixer](https://github.com/postcss/autoprefixer) para compatibilidade do css
 * [jQuery](https://github.com/jquery/jquery) para manipular DOM
-* [OwlCarousel2](https://github.com/OwlCarousel2/OwlCarousel2) para criação do banner
+* [OwlCarousel2](https://github.com/OwlCarousel2/OwlCarousel2) para funcionalidade do banner
 
 ## Instalação e Configuração
 
