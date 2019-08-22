@@ -15,4 +15,5 @@ Reformulação do Site da Fundação Educacional de Volta Redonda para fins educ
 
 1. Fork e clone o projeto
 2. Instale as dependências de packege.json executando ```$ npm install```
+3. Execute  ```$ npm watch:sass``` para compilar sass ao modificar os arquivos .scss
 
